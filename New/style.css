@@ -1,0 +1,129 @@
+
+
+.navbar-header{
+/* background-color: #424246; */
+background-color: rgb(2, 2, 2);
+color: blanchedalmond;
+}
+
+.navbar-header a{
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    /* padding: 4px 4px 4px 4px; */
+    border-radius: 2.5px;
+    
+    margin-top: 24px;
+    margin-left: 62px;
+    /* color: rgb(219, 205, 205); */
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: -15px;
+    margin-bottom: 36px;
+}
+
+
+.navbar-nav > li {
+    margin-left: 100px;
+    /* padding: 1px; */
+    /* padding: 4px 4px 4px 4px; */
+}
+.navbar-nav li:hover{
+    background-color: darkgray;
+    /* padding: 4px; */
+    /* padding: 4px 4px 4px 4px; */
+}
+.navbar-default{
+    background-color: black;
+    border-bottom-width: 0px;
+}
+.navbar-default .navbar-nav > li > a {
+    color: rgb(228, 212, 212);
+    font-weight: 300;
+
+}
+
+.header{
+    background-image: url(https://images.wallpaperscraft.com/image/single/headphones_bw_headset_120277_1600x900.jpg);
+    height: 600px;
+}
+.p1 h1{
+    text-align: center;
+    color: blanchedalmond;
+    margin-top:-21px;
+    padding-top: 162px;
+    font-size: 6rem;
+}
+.p1 p{
+    font-size: 2rem;
+    color: blanchedalmond;
+    text-align: center;
+}
+.page2{
+    background-color: darkgray;
+}
+.page2 h1{
+    font-size: 6rem;
+    text-align: center;
+    margin-top: 0px;
+}
+.page2 h3{
+    text-align: center;
+}
+
+.btn{
+    margin-top: 2rem;
+    margin-left: 600px;
+    margin-bottom: 2rem;
+    padding: 15px;
+    align-items: center;
+}
+.lead{
+    text-align: center;
+}
+.section h3{
+    text-align: center;
+}
+.btn1{
+    margin-top: 2rem;
+    margin-left: 550px;
+    margin-bottom: 2rem;
+    padding: 15px;
+    align-items: center;
+}
+#entertainment{
+    background-image: url(https://jolly-kalam-23776e.netlify.app/mytunes/img/section-bg.jpeg);
+    color: antiquewhite;
+}
+.section1{
+    text-align: center;
+    /* margin-top: 150px; */
+}
+.section1 h3{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.section1 p{
+    margin-bottom: 30rem;
+    font-size: 20px;
+}
+
+.footer-cols{
+    display: flex;
+    flex-direction: row;
+   
+}
+ol, ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 95px;
+   
+}
+footer{
+    background-color: grey;
+
+}
+a{
+    color: #000000;
+}

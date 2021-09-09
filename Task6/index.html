@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+        <script>
+            var a=1;
+             function add() 
+             {
+             var NAME = prompt("Enter your name");
+             var Age=prompt("enter your age");
+             var table = document.getElementById("myTable");
+             var row =table.insertRow(a);
+            //  var cell1 = row.insertCell(0);
+            //  var cell2 = row.insertCell(1);
+             row.insertCell(0).innerHTML=NAME;
+             row.insertCell(1).innerHTML=Age; 
+             a+=1;
+              }
+             function del()
+            { if(a>1){
+                document.getElementById("myTable").deleteRow(a-1);
+             a-=1    
+            }
+            
+            
+            } 
+        </script>
+        <style>
+            body{
+                background-attachment: fixed;
+                background-position: center;
+            }
+            .btn{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin: 20px;
+                
+                
+            }
+            .btn button{
+                /* margin: 20px; */
+                padding-block: 10px;
+                margin: 20px;
+                background-color:grey;
+            }
+            table{
+                    width: 50%;
+                    margin-left: 25%;
+                    border: 1px solid black;
+            }
+            .myTable{
+                border: 1px solid black;
+                background-color: white;
+            }
+            tr,td{
+                border:1px solid black ;
+                background-color: white;
+            }
+            .btn :hover{
+                color: burlywood;
+                box-shadow: 5px;
+                
+            }
+            
+        </style>
+<body background="https://images.pexels.com/photos/399161/pexels-photo-399161.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+    <div class="btn">
+<button onclick="add()">ADD USER</button>
+<button onclick="del()">DELETE</button>
+</div>
+<table id ="myTable">
+    <tr>
+        <td>NAME</td>
+        <td>AGE</td>
+    </tr>
+</table>
+</body>
+
+</html>

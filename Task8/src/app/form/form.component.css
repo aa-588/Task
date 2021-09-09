@@ -1,0 +1,16 @@
+form {
+    background-color: #f0f5f5;
+    max-width: 750px;
+    margin: auto;
+    padding: 40px 40px;
+    box-shadow: 5px 15px 20px;
+}
+.form-control input,
+.form-control select,
+.form-control textarea {
+    border: 1px solid #777;
+    padding: 10px;
+    display: block;
+    width: 95%;
+    font-family: inherit;
+}

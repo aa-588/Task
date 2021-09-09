@@ -1,0 +1,141 @@
+
+<html>
+<head>
+    
+    <title>
+        Survey Form
+    </title>
+ 
+    <style>
+ 
+        /* Styling the Body element i.e. Color,
+        Font, Alignment */
+        body {
+            background-color: #99ccff;
+            font-family: inherit;
+
+        }
+        h1{
+            text-align: center;
+            text-shadow: 2px 1px #004d00;
+        }
+ 
+        /* Styling the Form (Color, Padding, Shadow) */
+        form {
+            background-color: #f0f5f5;
+            max-width: 550px;
+            margin: auto;
+            padding: 20px 20px;
+            box-shadow: 5px 15px 20px;
+        }
+        .form-control input,
+        .form-control select,
+        .form-control textarea {
+            border: 1px solid #777;
+            padding: 10px;
+            display: block;
+            width: 95%;
+            font-family: inherit;
+        }
+        
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+            
+        }
+ 
+        /* Styling Button */
+        button {
+            background-color: #3399ff;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 95%;
+            margin-top: 10px;
+            margin-bottom: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Survey Form</h1>
+
+    <form>
+        <div class="form-control">
+            <label for="name">Name </label>
+            <input type="text" id="name" placeholder="Enter your name" />
+        </div><br>
+        <div class="form-control">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+        </div><br>
+        <div class="form-control">
+            <label for="age">Age</label>
+            <input type="number" id="age" placeholder="Enter your age" />
+        </div>
+        
+            <div class="radio">
+                <p>Select your gender</p>
+                <input type="radio" id="male" name="gender" >
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender">
+                <label for="female">Female</label><br>
+                <input type="radio" id="no" name="gender">
+                <label for="no">Not to be mention</label>
+
+        </div><br>
+        <div class="form-control">
+            <label for="role" id="label-role">Which option describes your profession ?</label>
+                <select name="role" id="role">
+                <option disabled selected value >------select an option------</option>
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+        </div><br>
+        <div class="form-control">
+            <label>Hobbies<small>(Check all that apply)</small></label><br>
+            <label for="inp-1"><input type="checkbox" name="inp">Reading</input></label><br>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp">Writing</input></label><br>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp">Photography</input></label><br>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp">Painting</input></label><br>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp">Dance</input></label><br>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp">Drawing</input></label><br>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">hiking</input></label><br>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp">others</input></label><br>
+        </div><br>
+        <div class="form-control">
+            <label for="comment">
+                Any Comments or suggestions
+            </label>
+ 
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                placeholder="Enter your comment here">
+            </textarea>
+        </div>
+        <button type="submit" value="submit">
+            Submit
+        </button>
+</form>
+</body>
+</html>
