@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+// import { Validators } from '@angular/forms';
+
+import { HttpClient } from '@angular/common/http';
+import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -13,7 +17,7 @@ export class FormComponent implements OnInit {
             "email":"",
             "city":"",
             "state":"",
-            "zip":"",
+            "zip":""
           
            
                 }
