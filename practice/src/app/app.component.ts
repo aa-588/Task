@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { FormBuilder,FormGroup,Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'task8';
+  title = 'Reddit-clone';
+  addarticle(title:HTMLInputElement,link:HTMLInputElement): boolean{
+    console.log(title.value ,link.value);
+    return false;
+  }
 }
-

@@ -5,56 +5,115 @@
     <br>
     <input type="text" placeholder="Address">
 </form> -->
-<form  #form="ngForm" (ngSubmit)="onSubmit()" novalidate> 
+<form  [formGroup]="myForm" (ngSubmit)="onSubmit()" novalidate> 
     <div class="form-group row">
         <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Name</label>
         <div class="col-sm-10">
-          <input #name="ngModel" name= "name" [(ngModel)]="input.name" type="text" class="form-control form-control-lg" size="65" id="colFormLabelLg" placeholder="enter your name" required>
-          <div *ngIf="name.errors && (name.dirty || name.touched)">
-            <p *ngIf="name.errors.required">* Name is required</p>
-          </div>
+          <!-- <label for="fname"><b>Full Name</b></label> -->
+      <input type="text" formControlName="name" placeholder="Enter Full Name" class="form-control form-control-lg" size="65" id="colFormLabelLg" />
+      <br />
+      <span
+        style="color: red"
+        *ngIf="
+          myForm.controls.name.touched &&
+          myForm.controls.name.hasError('required')">
+        Name is Required
+      </span>
+          <!-- <input formControlName="name" name= "name" [(ngModel)]="input.name" type="text" class="form-control form-control-lg" size="65" id="colFormLabelLg" placeholder="enter your name" required>
+          <div *ngIf="myForm.controls.name.errors && (myForm.controls.name.dirty || myForm.controls.name.touched)">
+            <p *ngIf="myForm.controls.name.hasError('required')">* Name is required</p>
+          </div> -->
         </div>
       </div>
       <div class="form-group row">
         <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email</label>
         <div class="col-sm-10">
-          <input #email="ngModel" name="email" type ="email" [(ngModel)]="input.email" class="form-control form-control-lg" ngModel id="colFormLabelLg" placeholder="enter your email"#emailref="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/>
+          <input type="email" formControlName="email" placeholder="Enter Your email" class="form-control form-control-lg" size="65" id="colFormLabelLg" />
+          <br />
+          <span
+            style="color: red"
+            *ngIf="
+              myForm.controls.email.touched &&
+              myForm.controls.email.hasError('required')">
+            email is Required
+          </span>
+          <!-- <input #email="ngModel" name="email" type ="email" [(ngModel)]="input.email" class="form-control form-control-lg" ngModel id="colFormLabelLg" placeholder="enter your email"#emailref="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/>
              <div *ngIf="email.errors && (email.dirty || email.touched)">
                <div [hidden]="!emailref.errors?.pattern">
                  invalid pattern
                </div>
                <p *ngIf="email.errors.required">* email is required</p>
-             </div>
+             </div> -->
         </div>
       </div>
       <div class="form-group row">
         <div class="form-group col-md-6 col-form-label-lg" >
           <label for="city">City</label>
-          <input #city="ngModel" name="city" [(ngModel)]="input.city"type="text" class="form-control" id="inputCity" required>
+          <!-- <input #city="ngModel" name="city" [(ngModel)]="input.city"type="text" class="form-control" id="inputCity" required>
           <div *ngIf="city.errors && (city.dirty || city.touched)">
             <p *ngIf="city.errors.required">* city is required</p>
           </div>
+        </div> -->
+        <input type="text" formControlName="city"  />
+        <br />
+        <span
+          style="color: red"
+          *ngIf="
+            myForm.controls.city.touched &&
+            myForm.controls.city.hasError('required')">
+          city is Required
+        </span>
         </div>
-        <div class="form-group col-md-4 col-form-label-lg">
+        <div class="form-group row">
+        <div class="form-group col-md-6 col-form-label-lg">
           <label for="inputState">State</label>
+          <input type="text" formControlName="state" placeholder="Enter state" />
+          <br />
+          <span
+            style="color: red"
+            *ngIf="
+              myForm.controls.state.touched &&
+              myForm.controls.state.hasError('required')">
+            state is Required
+          </span>
+          </div>
+          </div>
+          <!-- <label for="inputState">State</label>
           <input #state="ngModel" name="state" [(ngModel)]="input.state"type="text" class="form-control" id="state" required>
           <div *ngIf="state.errors && (state.dirty || state.touched)">
             <p *ngIf="state.errors.required">* state is required</p>
-          </div>
-        </div>
+          </div> -->
+      
         <div class="form-group col-md-2 col-form-label-lg">
           <label for="inputZip">Zip</label>
-          <input #zip="ngModel" name="zip" [(ngModel)]="input.zip" type="number" class="form-control" id="inputZip" pattern="[0-9]{6}" required >
-          <div *ngIf="zip.errors && (zip.dirty || zip.touched)">
+          <input type="number " formControlName="zip"  required/>
+          <br />
+          <span
+            style="color: red"
+            *ngIf="
+              myForm.controls.zip.touched &&
+              myForm.controls.zip.hasError('required')">
+            zip is Required
+          </span>
+          <!-- <input #zip="ngModel" name="zip" [(ngModel)]="input.zip" type="number" class="form-control" id="inputZip" pattern="[0-9]{6}" required > -->
+          <!-- <div *ngIf="zip.errors && (zip.dirty || zip.touched)">
             <p *ngIf="zip.errors.required">* zip is required</p>
-            <p *ngIf="zip.errors.pattern">* zip must contain 6 numbers</p>
+            <p *ngIf="zip.errors.pattern">* zip must contain 6 numbers</p> -->
           </div>
         </div>
-      </div>
-
-      <fieldset class="form-group col-form-label-lg">
+        <fieldset class="form-group col-form-label-lg"> 
+        <div class="row"> 
+        <p>
+          <label for="gender">Geneder </label></p>
+          <div class="col-sm-10">
+          <input type="radio" value="male" id="gender" name="gender" formControlName="gender"> Male
+          <input type="radio" value="female" id="gender" name="gender" formControlName="gender"> Female
+        </div>
+        </div>
+        </fieldset>
+      <!-- <fieldset class="form-group col-form-label-lg"> -->
         <!-- <div class="row"> -->
-          <p>Select your gender</p>
+          <!-- <p>Select your gender</p>
           <div class="col-sm-10">
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
@@ -68,12 +127,44 @@
                 Female
               </label>
             </div>
-          </div>
+          </div> -->
         <!-- </div> -->
-      </fieldset>
+      <!-- </fieldset> -->
       <div class="btn-group" role="group" aria-label="Basic example">
-        <button [disabled]="form.invalid" type="submit" class="btn btn-secondary col-6 col-md-4">Submit</button>
+        <button  type="submit"  value="submit" class="btn btn-secondary col-6 col-md-4" onclick="onSubmit()">Submit</button>
         </div>
-
-  
 </form>
+  <div class="container">
+              
+    <table class="table table-hover" style="margin-top: 30px;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>E-mail</th>
+          <th>City </th>
+          <th>State</th>
+          <th>Zip</th>
+          <th>gender</th>
+          <th>DELETE</th>
+        </tr>
+      </thead>
+      <!-- <tbody >              
+        <tr>
+          <td>{{myForm.value.name}}</td>
+          <td>{{myForm.value.email}}</td>
+          <td>{{myForm.value.city}}</td>
+          <td>{{myForm.value.state}}</td>
+          <td>{{myForm.value.zip}}</td>
+          <td>{{myForm.value.gender}}</td>
+        </tr>
+      </tbody> -->
+      <!-- <tbody>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+      </tbody> -->
+    </table>
+  </div>
